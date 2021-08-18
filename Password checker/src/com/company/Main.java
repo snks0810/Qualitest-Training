@@ -13,11 +13,9 @@ public class Main {
             String passwordEntered = passwordInput.nextLine();
             passwords.add(passwordEntered);
         }
-        System.out.println("");
+        System.out.println("------------------------------------------------------------");
         for(String i: passwords) {
             int length = i.length();
-            int trials = 2;
-            do {
                 if (length < 4) {
                     System.out.println("Too short! Your password must be more than 3 characters");// short check
                 } else if (length > 10) {
@@ -26,25 +24,21 @@ public class Main {
                         !i.contains("4") && !i.contains("5") && !i.contains("6") && !i.contains("7") &&
                         !i.contains("8") && !i.contains("9")) {
                     System.out.println("Invalid! Password requires a number"); // number check
-                } else if (!i.contains("a") && !i.contains("b") && !i.contains("c") && !i.contains("d") && !i.contains("e") && !i.contains("f") && // poorly optimised
-                           !i.contains("g") && !i.contains("h") && !i.contains("i") && !i.contains("j") && !i.contains("k") && !i.contains("l") &&
-                           !i.contains("m") && !i.contains("n") && !i.contains("o") && !i.contains("p") && !i.contains("q") && !i.contains("r") &&
-                           !i.contains("s") && !i.contains("t") && !i.contains("u") && !i.contains("v") && !i.contains("w") && !i.contains("x") &&
-                           !i.contains("y") && !i.contains("z")){
+                } else if (!i.toLowerCase().contains("a") && !i.toLowerCase().contains("b") && !i.toLowerCase().contains("c") && // poorly optimised
+                           !i.toLowerCase().contains("d") && !i.toLowerCase().contains("e") && !i.toLowerCase().contains("f") &&
+                           !i.toLowerCase().contains("g") && !i.toLowerCase().contains("h") && !i.toLowerCase().contains("i") &&
+                           !i.toLowerCase().contains("j") && !i.toLowerCase().contains("k") && !i.toLowerCase().contains("l") &&
+                           !i.toLowerCase().contains("m") && !i.toLowerCase().contains("n") && !i.toLowerCase().contains("o") &&
+                           !i.toLowerCase().contains("p") && !i.toLowerCase().contains("q") && !i.toLowerCase().contains("r") &&
+                           !i.toLowerCase().contains("s") && !i.toLowerCase().contains("t") && !i.toLowerCase().contains("u") &&
+                           !i.toLowerCase().contains("v") && !i.toLowerCase().contains("w") && !i.toLowerCase().contains("x") &&
+                           !i.toLowerCase().contains("y") && !i.toLowerCase().contains("z")){
                     System.out.println("Invalid! Password requires a letter"); // letter check
                 } else {
                     System.out.println("Acceptable password");
                     break;
                 }
-                System.out.println("You have " + trials + " attempts remaining");
-                System.out.println("");
-                if (trials == 0) {
-                    System.out.println("You don't get to have a password");
-                    System.out.println("");
-                    System.out.println("");
-                }
-                trials--;
-            } while (trials >= 0);
+
         }
         }
     }
