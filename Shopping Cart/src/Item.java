@@ -11,5 +11,5 @@ public class Item {
         final com.company.Item plumb = new com.company.Item("Plumb", 0.15f);
         final com.company.Item pear = new com.company.Item("Pear", 0.20f);
         final com.company.Item banana = new com.company.Item("Banana", 0.30f);
-        final com.company.Item grapes = new com.company.Item("Grapes", 1.00f);
+        final com.company.Item mango = new com.company.Item("Mango", 0.50f);
 }
