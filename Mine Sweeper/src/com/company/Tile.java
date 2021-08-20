@@ -4,7 +4,7 @@ public class Tile {
     // attributes
 
     private boolean isBomb;
-    private int surroundingBombs;
+    private int surroundingBombs = 0;
     private boolean uncovered;
     private boolean flagged;
     private int xCoordinate;
@@ -26,15 +26,21 @@ public class Tile {
 
     // methods
 
-    private int calculateSurroundingBombs(){
-        for(int i = -1; i <= 1; i++){
-            for(int j = -1; j <= 1; j++){
-                if(isBomb){
-                    surroundingBombs ++ ;}
-            }
-        }
-        return surroundingBombs;
+    public void checkSurroundingBombs(int a,int b){
+        
     }
+
+    public int getSurroundingBombs(){
+        return surroundingBombs;}
+
+    public void setSurroundingBombs( int surroundingBombCounter){
+        this.surroundingBombs = surroundingBombCounter;}
+
+    public boolean getIsBomb(){
+        return isBomb;}
+
+    public void setIsBomb( boolean bombState){
+        this.isBomb = bombState;}
 
     public String toString(){
         if(!uncovered){
