@@ -15,8 +15,6 @@ public class HiddenMatrix {
         Tile[][] hiddenMatrix = new Tile[columns][rows];
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows; j++) {
-                float randomFloat = (float) Math.random();
-                int zeroOneRandom = Math.round(randomFloat);
                 hiddenMatrix[i][j] = new Tile(i, j);
             }
         }
