@@ -1,10 +1,11 @@
 package com.company;
 
 public class Tile {
+
     // attributes
 
     private boolean isBomb;
-    private int surroundingBombs = 0;
+    private int surroundingBombs;
     private boolean uncovered;
     private boolean flagged;
     private int xCoordinate;
@@ -27,7 +28,8 @@ public class Tile {
     // methods
 
     public void checkSurroundingBombs(int a,int b){
-        
+
+
     }
 
     public int getSurroundingBombs(){

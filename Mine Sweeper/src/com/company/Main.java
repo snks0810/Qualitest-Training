@@ -19,3 +19,10 @@ public class Main {
             System.out.println(matrix);
         }
     }
+
+    // improvements:
+    // move surrounding tile checker to tile class to make errors easier to locate
+    // create user interaction element (type in the coordinate)
+    // potentially a point and click UI
+    // timer
+    // flag feature + flag counter
