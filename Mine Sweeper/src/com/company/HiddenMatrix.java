@@ -25,29 +25,30 @@ public class HiddenMatrix {
 
         for (int column = 0; column < columns; column++) { // x axis
             for (int row = 0; row < rows; row++) {         // y axis
-                for (int i = -1; i <= 1; i++) {            // surrounding
-                    for (int j = -1; j <= 1; j++) {        // tiles
-                        if (column + i >= 0 && column + i <= columns) {
-                            System.out.println("1");
-                            if (row + j >= 0 && row + i <= rows) {
-                                System.out.println("2");
-                                if (i == 0 && j == 0) {
-                                    System.out.println("3");
-                                    if (matrix[column + i][row + j].getIsBomb()) {
-                                        int tempAdd = matrix[column][row].getSurroundingBombs() + 1;
-                                        System.out.println(tempAdd);
-                                        matrix[column][row].setSurroundingBombs(tempAdd);
-                                    } else {
-                                        System.out.println("null");
-                                    }
-                                } else {
-                                    System.out.println("3b");
-                                }
-                            } else {
-                                System.out.println("2b");
-                            }
-                        } else {
-                            System.out.println("1b");
+                checkSurroundingBombs(hiddenMatrix,column,row)}}
+        //        for (int i = -1; i <= 1; i++) {            // surrounding
+        //            for (int j = -1; j <= 1; j++) {        // tiles
+        //                if (column + i >= 0 && column + i <= columns) {
+        //                    System.out.println("1");
+        //                    if (row + j >= 0 && row + i <= rows) {
+        //                        System.out.println("2");
+        //                        if (i == 0 && j == 0) {
+        //                            System.out.println("3");
+        //                            if (matrix[column + i][row + j].getIsBomb()) {
+        //                                int tempAdd = matrix[column][row].getSurroundingBombs() + 1;
+        //                                System.out.println(tempAdd);
+        //                                matrix[column][row].setSurroundingBombs(tempAdd);
+        //                            } else {
+        //                                System.out.println("null");
+        //                            }
+        //                        } else {
+        //                        System.out.println("3b");
+        //                        }
+        //                    } else {
+        //                        System.out.println("2b");
+        //                    }
+        //                } else {
+        //                    System.out.println("1b");
                         }
                     }
                 }

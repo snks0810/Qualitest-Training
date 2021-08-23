@@ -27,8 +27,17 @@ public class Tile {
 
     // methods
 
-    public void checkSurroundingBombs(int a,int b){
-
+    public void checkSurroundingBombs(Tile[][] matrix,int a,int b){
+        for(int i = -1; i <= 1; i++){
+            for(int j = -1; j <= 1; j++){
+                if(a+i < 0 || a+i > 10 || b+j < 0 || b+j > 10){
+                    System.out.println("out of bounds at ("+(a+i)+","+(b+j)+")")
+                }else{
+                    if(matrix(a+i,b+j).isBomb){
+                        this.surroundingBombs++;
+                }}
+            }
+        }
 
     }
 
